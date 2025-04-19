@@ -1,0 +1,19 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
+.env.*
+
+# Docker
+*.log
+docker-compose.override.yml
+
+# Editor
+.vscode/
+.idea/
+*.swp
+
+# Virtualenv
+env/
+venv/
