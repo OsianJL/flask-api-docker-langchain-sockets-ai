@@ -1,3 +1,9 @@
+Absolutely! Here's a clean, professional README.md tailored to the exact work we've done so far. It emphasizes that everything runs through Docker, making it easy for anyone to get started with just one command.
+
+📄 README.md
+markdown
+Copiar
+Editar
 # Flask API with PostgreSQL – Fully Dockerized 🐳
 
 This is a starter template for building robust Flask APIs using Docker for both the **API** and **PostgreSQL**. It's ideal for scalable development and easy team collaboration.
@@ -23,8 +29,8 @@ This is a starter template for building robust Flask APIs using Docker for both 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/OsianJL/flask-api-docker.git
-cd flask-api-docker
+git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
+cd YOUR_REPO_NAME
 2. Create your .env file
 Create a .env file in the root of the project:
 
@@ -114,4 +120,4 @@ Stop containers	docker-compose down
 Enter API container	docker-compose exec api bash
 Apply migrations	flask db migrate && flask db upgrade
 🧑‍🎓 Author
-Made by @OsianJL
+Made by @YOUR_GITHUB_USERNAME
