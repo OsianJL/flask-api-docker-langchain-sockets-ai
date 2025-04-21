@@ -23,8 +23,8 @@ This is a starter template for building robust Flask APIs using Docker for both 
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
+git clone https://github.comOsianJL/flask-api-docker.git
+cd flask-api-docker
 2. Create your .env file
 Create a .env file in the root of the project:
 
