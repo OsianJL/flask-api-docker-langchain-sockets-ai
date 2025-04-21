@@ -1,9 +1,3 @@
-Absolutely! Here's a clean, professional README.md tailored to the exact work we've done so far. It emphasizes that everything runs through Docker, making it easy for anyone to get started with just one command.
-
-📄 README.md
-markdown
-Copiar
-Editar
 # Flask API with PostgreSQL – Fully Dockerized 🐳
 
 This is a starter template for building robust Flask APIs using Docker for both the **API** and **PostgreSQL**. It's ideal for scalable development and easy team collaboration.
@@ -28,62 +22,66 @@ This is a starter template for building robust Flask APIs using Docker for both 
 
 ### 1. Clone the repository
 
-```bash
-git clone https://github.com/YOUR_USERNAME/YOUR_REPO_NAME.git
-cd YOUR_REPO_NAME
-2. Create your .env file
-Create a .env file in the root of the project:
+```
+git clone https://github.com/OsianJL/flask-api-docker.git
+cd flask-api-docker
+```
 
-ini
-Copiar
-Editar
+### 2. Create your `.env` file
+
+Create a `.env` file in the root of the project:
+
+```
 DATABASE_URL=postgresql://flaskuser:flaskpassword@db:5432/flaskdb
 JWT_SECRET_KEY=your-secret-key
-You can use .env.example as a reference.
+```
 
-3. Start the project with Docker
-bash
-Copiar
-Editar
+> You can use `.env.example` as a reference.
+
+### 3. Start the project with Docker
+
+```
 docker-compose up
-On first run (or if you change dependencies), use:
+```
 
-bash
-Copiar
-Editar
+> On first run (or if you change dependencies), use:
+
+```
 docker-compose up --build
-Once running, open your browser at http://localhost:5000 to confirm the API is live.
+```
 
-🔐 Registering a User
+Once running, open your browser at [http://localhost:5000](http://localhost:5000) to confirm the API is live.
+
+## 🔐 Registering a User
+
 Send a POST request to:
 
-bash
-Copiar
-Editar
+```
 POST http://localhost:5000/register
+```
+
 Body example:
 
-json
-Copiar
-Editar
+```json
 {
   "email": "your@email.com",
   "password": "yourPassword123"
 }
+```
+
 If successful, the response will be:
 
-json
-Copiar
-Editar
+```json
 {
   "message": "User created successfully"
 }
+```
+
 The user will be stored in the PostgreSQL database with a hashed password.
 
-🛠 Project Structure
-arduino
-Copiar
-Editar
+## 🛠 Project Structure
+
+```
 ├── app/
 │   ├── models/
 │   │   └── user.py
@@ -99,25 +97,32 @@ Editar
 ├── .dockerignore
 ├── run.py
 └── README.md
-🧪 Migrations
-Migrations are already set up with a users table. If you need to reset or add models:
+```
 
-bash
-Copiar
-Editar
-# Get inside the API container
+## 🧪 Migrations
+
+Migrations are already set up with a `users` table. If you need to reset or add models:
+
+```
 docker-compose exec api bash
-
-# Then run:
 flask db migrate -m "your message"
 flask db upgrade
-🧼 Useful Commands
+```
 
-Action	Command
-Start the project	docker-compose up
-Rebuild after dependency change	docker-compose up --build
-Stop containers	docker-compose down
-Enter API container	docker-compose exec api bash
-Apply migrations	flask db migrate && flask db upgrade
-🧑‍🎓 Author
-Made by @YOUR_GITHUB_USERNAME
+## 🧼 Useful Commands
+
+| Action                         | Command                              |
+|--------------------------------|--------------------------------------|
+| Start the project              | `docker-compose up`                 |
+| Rebuild after dependency change| `docker-compose up --build`         |
+| Stop containers                | `docker-compose down`               |
+| Enter API container            | `docker-compose exec api bash`      |
+| Apply migrations               | `flask db migrate && flask db upgrade` |
+
+## 🧑‍🎓 Author
+
+Made by [@OsianJL](https://github.com/OsianJL)
+
+## 📝 License
+
+MIT – Use freely and modify for your own projects.
