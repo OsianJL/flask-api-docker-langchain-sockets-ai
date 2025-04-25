@@ -18,7 +18,9 @@ services:
     build: .
     container_name: flask_api
     restart: always
-    command: flask run --host=0.0.0.0
+    command: python run.py
+    
+
     volumes:
       - .:/app
     ports:

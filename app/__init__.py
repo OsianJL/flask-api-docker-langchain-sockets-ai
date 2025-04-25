@@ -1,6 +1,6 @@
 from flask import Flask
 from app.config.config import Config
-from app.extensions.extensions import db, jwt, migrate, bcrypt
+from app.extensions.extensions import db, jwt, migrate, bcrypt, socketio
 from app.resources.auth import auth_bp
 
 
@@ -13,6 +13,7 @@ def create_app():
     jwt.init_app(app)
     migrate.init_app(app, db)
     bcrypt.init_app(app)
+    socketio.init_app(app) 
     
     app.register_blueprint(auth_bp)
 
